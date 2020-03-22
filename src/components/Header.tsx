@@ -4,7 +4,7 @@ interface HeaderProps {
     title: string;
 }
 
-export const Header: React.SFC<HeaderProps> = ({ title }) => {
+const Header: React.SFC<HeaderProps> = ({ title }) => {
     return (
         <header className="uk-margin-large-bottom">
             <nav className="uk-navbar uk-background-primary uk-light" uk-navbar="true">
@@ -18,3 +18,5 @@ export const Header: React.SFC<HeaderProps> = ({ title }) => {
         </header>
     )
 }
+
+export default Header
