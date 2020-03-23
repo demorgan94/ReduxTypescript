@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import Header from './Header';
-import Todos from './Todos';
+import User from 'pages/Users';
 
 const App: React.FC = () => {
   return (
     <Fragment>
-      <Header title="ToDoList" />
-      <Todos />
+      <Header title="React/Redux + Typescript" />
+      <User />
     </Fragment>
   );
 }
