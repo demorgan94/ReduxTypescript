@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavbarText } from 'reactstrap'
+import { Container, Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavbarText } from 'reactstrap'
+import { IconContext } from 'react-icons'
+import { DiReact } from 'react-icons/di'
 
 interface HeaderProps {
     title: string;
@@ -13,13 +15,17 @@ const Header: React.SFC<HeaderProps> = ({ title }) => {
 
     return (
         <Navbar color="dark" dark expand="md">
-            <NavbarBrand href="/">{title}</NavbarBrand>
-            <NavbarToggler onClick={toggle} />
-            <Collapse isOpen={isOpen} navbar>
-                <Nav className="mr-auto" navbar>
-                    <NavbarText>Simple Text</NavbarText>
-                </Nav>
-            </Collapse>
+            <Container>
+                <IconContext.Provider value={{ size: "2em" }} >
+                    <NavbarBrand href="/"><DiReact /> {title}</NavbarBrand>
+                </IconContext.Provider>
+                <NavbarToggler onClick={toggle} />
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav className="ml-auto" navbar>
+                        <NavbarText>Simple Text</NavbarText>
+                    </Nav>
+                </Collapse>
+            </Container>
         </Navbar>
     )
 }

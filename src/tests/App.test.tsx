@@ -8,9 +8,4 @@ describe('App Tests', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find('Header').exists()).toBe(true);
   });
-
-  it('should find ToDoForm', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find('ToDoForm').exists()).toBe(true);
-  })
 });
